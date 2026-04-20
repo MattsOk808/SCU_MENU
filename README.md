@@ -21,9 +21,9 @@ You will be prompted to enter a date in the format "YYYY-MM-DD" after which your
 You will be prompted to enter a date in the format "YYYY-MM-DD". 
 If you do not have a prexisting entry for that date, a new one will be created.
 
-To view the menu enter 'menu'
+To view the menu enter ```menu```
 
-To finish editing 'done'
+To finish editing ```done```
 
 To update your schedule, enter a mealtime(breakfast/lunch/dinner) then you will be prompted to enter the restaurant you want to save the meal from. Finally, you will be prompted to enter the number of the item (which can be seen in the printed menu) after which your new meal for that time will be updated.
 After exiting, the changes to your schedule will be printed.
