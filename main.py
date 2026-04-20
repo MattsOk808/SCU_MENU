@@ -34,9 +34,6 @@ def print_menu(times=default_meals,restaurants=default_restaurant_list,date=""):
                     print(r.get_text())
                     print_items(r)
                     print("")
-        else:
-            print("Menu not found")
-            break
 
 def print_items(restaurant):
     names,prices=get_item_infos(restaurant)
@@ -158,8 +155,14 @@ while cmd != "exit":
             for i,meal in enumerate(info):
                 print(f"{default_meals[i].upper()}: {meal}")
     elif cmd=="menu":
-        d=input("Enter date (YYYY-MM-DD)\n")
-        if d not in saved_menus:
+        d=input("Enter date (YYYY-MM-DD) or 'today'\n")
+        if d=="today":
+            d=f"{date.today()}"
+            if d not in saved_menus:
+                page=urlopen(Request(url,headers=headers))
+                html=page.read().decode("utf-8")
+                saved_menus[d]=BeautifulSoup(html,"html.parser")
+        elif d not in saved_menus:
             try:
                 test=datetime.strptime(d,"%Y-%m-%d").date()
                 page=urlopen(Request(url+d,headers=headers))
