@@ -1,13 +1,15 @@
 # SCU_MENU
+
 A web scraping tool that allows the user to view the current breakfast/lunch/dinner menu at SCU. Also allows the user to save meals into a schedule.
 
 
-#SETUP
+# SETUP
+
 To run correctly, ensure that BeautifulSoup is installed using 
 
 ```pip install beautifulsoup4```
 
-#RUNNING
+# RUNNING
 
 Commands:
 
