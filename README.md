@@ -15,7 +15,7 @@ Commands:
 
 ```menu```
 
-This will print the current menu for breakfast/lunch/dinner
+You will be prompted to enter a date in the format "YYYY-MM-DD" or 'today' after which the menu for breakfast/lunch/dinner for that day will be printed
 
 ```date```
 
