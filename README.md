@@ -17,9 +17,9 @@ Commands:
 
 You will be prompted to enter a date in the format "YYYY-MM-DD" or 'today' after which the menu for breakfast/lunch/dinner for that day will be printed
 
-```date```
+```schedule```
 
-You will be prompted to enter a date in the format "YYYY-MM-DD" after which your schedule for that date will be printed out
+You will be prompted to enter a date in the format "YYYY-MM-DD" or 'full'. If a date was entered, your schedule for that date will be printed. If 'full' was entered, all entries in your schedule are printed out. Additionally, the total cost of all meals for that day will be printed in both cases.
 
 ```edit```
 
