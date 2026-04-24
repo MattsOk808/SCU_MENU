@@ -11,6 +11,8 @@ To run correctly, ensure that BeautifulSoup is installed using
 
 # RUNNING
 
+Run with ```python main.py```
+
 Commands:
 
 ```menu```
