@@ -41,12 +41,14 @@ You will be shown a list of all meals in your schedule and all meals you have se
 
 ```favorites```
 
-You can choose between adding, viewing, or exiting. 
+You can choose between adding, deleting, viewing, or exiting. 
 
 Adding will prompt you for the date, restaurant, and item after which the selected item will be added to your list of favorites. 
+
+Deleting will prompt you to select an item in your favorites list or cancel after which the selected item will be deleted from the list.
 
 Viewing will display all of your current favorites.
 
 ```exit```
 
-Exits the program and writes the schedule into schedule.json, favorites into favorites.json, and ingredients into ingredients.json (for only the meals in your schedule)
+Exits the program and writes the schedule into schedule.json, favorites into favorites.json, and ingredients into ingredients.json (for only the meals in your schedule and favorites list)
