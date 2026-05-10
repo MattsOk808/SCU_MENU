@@ -205,7 +205,7 @@ while True:
             else:
                 print(f"{meals[check-1]}: {', '.join(ingredient_dict[meals[check-1]])}")
         case 5: #favorites
-            options=["Add","View","Cancel"]
+            options=["Add","Remove","View","Cancel"]
             print_options(options)
             choice=numcheck(input("Select Option: "),len(options))
             if choice == -2:
@@ -261,7 +261,20 @@ while True:
                             else:
                                 print(f"Added {saved_menus[d][m][r][i-1].name} to favorites\n")
                                 favorites_set.add(saved_menus[d][m][r][i-1].name)
-            elif choice==2: #View
+            elif choice==2: #Delete
+                options=sorted(favorites_set)+["Cancel"]
+                print_options(options)
+                delete=numcheck(input("Select item: "),len(options))
+                if delete == -2:
+                    print("Input not a number")
+                elif delete == -1:
+                    print("Input out of range")
+                elif delete == len(options):
+                    continue
+                else:
+                    print(f"Removed {options[delete-1]} from favorites list")
+                    favorites_set.remove(options[delete-1])
+            elif choice==3: #View
                 for i,favorite in enumerate(sorted(favorites_set),start=1):
                     print(f"[{i}] {favorite}")
                 print("")
@@ -278,6 +291,9 @@ with open("ingredients.json","w") as ingredient_list:
         for meal,_ in enumerate(new_schedule_dict[d]):
             if new_schedule_dict[d][meal].name in ingredient_dict:
                 temp_dict[new_schedule_dict[d][meal].name]=ingredient_dict[new_schedule_dict[d][meal].name]
+    for meal in favorites_set:
+        if meal not in temp_dict and meal in ingredient_dict:
+            temp_dict[meal]=ingredient_dict[meal]
     json.dump(temp_dict,ingredient_list,indent=4)
 with open("favorites.json","w") as favorites:
     json.dump(list(favorites_set),favorites,indent=4)
