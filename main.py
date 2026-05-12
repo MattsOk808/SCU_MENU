@@ -3,6 +3,7 @@ from functions import *
 from shared_vars import *
 from parse_menu import parse_menu
 import json
+from recommendation import get_recommendation
 
 NUMDAYS=7 #number of days that you can view after current day plus 1
 
@@ -43,7 +44,7 @@ except json.JSONDecodeError:
 
 cmd_num=None
 dates=[]
-commands=["Menu","Edit","Schedule","Ingredients","Favorites","Exit"]
+commands=["Menu","Edit","Schedule","Ingredients","Favorites","Recomendation","Exit"]
 edit_options_left=["Menu"]
 edit_options_right=["Save and exit","Exit without saving"]
 
@@ -130,7 +131,7 @@ while True:
                                 elif option == -1:
                                     print("Input out of range")
                                 elif option==len(meals):
-                                    break
+                                    continue
                                 else:
                                     item_num=option-1
                                     new_meal=update_schedule(d,mealtime,restaurant,item_num)
@@ -159,7 +160,7 @@ while True:
         case 3: #schedule
             options=get_options(new_schedule_dict,["All","Cancel"])
             print_options(options)
-            choice=numcheck(input("Select Option: "),len(options))
+            choice=numcheck(input("Select Date: "),len(options))
             if choice == -2:
                 print("Input not a number")
             elif choice == -1:
@@ -180,7 +181,7 @@ while True:
                 info=new_schedule_dict[options[choice-1]]
                 print(f"{options[choice-1]}: ")
                 total_cost=0.0
-                meal_list=get_times(d)
+                meal_list=get_times(options[choice-1])
                 for i,meal in enumerate(info):
                     total_cost+=float(meal.price)
                     print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price}")
@@ -280,7 +281,23 @@ while True:
                 print("")
             else:
                 continue
-        case 6: #exit
+        case 6: #recommendation
+            print_options(dates)
+            n=numcheck(input("Select date: "),len(dates))
+            if n == -2:
+                print("Input not a number")
+                continue
+            if n == -1:
+                print("Input out of range")
+                continue
+            if n==len(dates): #cancel
+                continue
+            d=dates[n-1]
+            if d not in saved_menus:
+                parse_menu(date=d)
+            print(get_recommendation(favorites_set,ingredient_dict,saved_menus,d).text)
+            continue #I'm not completely sure why but if you remove this continue and run out of request, after get_recommendations returns, the program stops reading inputs and gets stuck asking you for input
+        case 7: #exit
             break
 
 with open("schedule.json",'w') as new_schedule:
