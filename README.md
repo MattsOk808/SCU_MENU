@@ -6,7 +6,14 @@ A web scraping tool that allows the user to view the current breakfast/lunch/din
 
 To run correctly, ensure that all libraries are installed using 
 
-```pip install beautifulsoup4 requests colorama sortedcontainers```
+```pip install beautifulsoup4 requests colorama sortedcontainers google-genai python-dotenv```
+
+You also must have a gemini api key and create a .env file that contains
+
+```
+API_KEY="YOUR_API_KEY"
+```
+without the quotations and with your api key
 
 # RUNNING
 
@@ -48,6 +55,9 @@ Adding will prompt you for the date, restaurant, and item after which the select
 Deleting will prompt you to select an item in your favorites list or cancel after which the selected item will be deleted from the list.
 
 Viewing will display all of your current favorites.
+
+``` recommendation ```
+You will be prompted to select a date. Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner for that date using the menu for that date, your list of favorite meals, and the ingredients in your favorite meals and meals on the menu.
 
 ```exit```
 
