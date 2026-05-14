@@ -3,6 +3,7 @@ from shared.functions import *
 from shared.shared_vars import *
 from shared.parse_menu import parse_menu
 import json
+from recommendation import get_recommendation
 
 NUMDAYS=7 #number of days that you can view after current day plus 1
 
@@ -52,7 +53,7 @@ except json.JSONDecodeError:
 
 cmd_num=None
 dates=[]
-commands=["Menu","Edit","Schedule","Ingredients","Favorites","Allergies/Dietary Restrictions","Exit"]
+commands=["Menu","Edit","Schedule","Ingredients","Favorites","Allergies/Dietary Restrictions","Recommendation","Exit"]
 edit_options_left=["Menu"]
 edit_options_right=["Save and exit","Exit without saving"]
 
@@ -331,7 +332,48 @@ while True:
                     print("")
                 case 4:
                     continue
-        case 7: #exit
+        case 7: #recommendation
+            print_options(dates)
+            n=numcheck(input("Select date: "),len(dates))
+            if n == -2:
+                print("Input not a number")
+                continue
+            if n == -1:
+                print("Input out of range")
+                continue
+            if n==len(dates): #cancel
+                continue
+            d=dates[n-1]
+            if d not in saved_menus:
+                parse_menu(date=d)
+            toggles=["healthy","low price","something new","vegetarian","vegan","Continue"]
+            toggled=[]
+            for i in range(len(toggles)-1):
+                toggled.append(False)
+            while(True):
+                for i,option in enumerate(toggles,start=1):
+                    print(f"{i}: {toggles[i-1]}",end="")
+                    if i != len(toggles):
+                        print(f": {toggled[i-1]}")
+                print("")
+                choice=numcheck(input(f"Enter preference number to toggle on/off or {len(toggles)} to continue: "),len(toggles))
+                match choice:
+                    case -2:
+                        print("Input not a number")
+                    case -1:
+                        print("Input out of range")
+                    case x if x!=len(toggles):
+                        toggled[x-1]=not toggled[x-1]
+                    case _:
+                        break
+            pref=[]
+            for i in range(len(toggles)-1):
+                if toggled[i]==True:
+                    pref.append(toggles[i])
+            print("Getting recommendation ...")
+            print(get_recommendation(favorites_set,ingredient_dict,saved_menus[d],pref,allergies_and_restrictions).text)
+            continue #I'm not completely sure why but if you remove this continue and run out of request, after get_recommendations returns, the program stops reading inputs and gets stuck asking you for input
+        case 8: #exit
             break
 
 with open("schedule.json",'w') as new_schedule:
