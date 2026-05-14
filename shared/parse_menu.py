@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from datetime import date,datetime
-from shared_vars import saved_menus,base_url,weekday_meals,weekenend_meals,ingredient_dict,headers,iteminfo
-from functions import get_times
+from shared.shared_vars import saved_menus,base_url,weekday_meals,weekenend_meals,ingredient_dict,headers,iteminfo
+from shared.functions import get_times
 
 def parse_menu(url=base_url,date=f"{date.today()}"):
     page=urlopen(Request(url+date,headers=headers))

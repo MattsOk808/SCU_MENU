@@ -1,5 +1,5 @@
 from datetime import date,datetime
-from shared_vars import saved_menus,new_schedule_dict,favorites_set,weekday_meals,weekenend_meals,ingredient_dict,allergies_and_restrictions
+from shared.shared_vars import saved_menus,new_schedule_dict,favorites_set,weekday_meals,weekenend_meals,ingredient_dict,allergies_and_restrictions
 from colorama import Fore,Style,init
 
 default_restaurant_list=set(["The Garden","The Spice Market","Simply Oasis","The Slice","The Global Grill","Soup","The Chef's Table","Chef's Tabel Dessert Night","Chef's Table Dessert Night","Stacks Deli","The Fire","La Parilla"])
