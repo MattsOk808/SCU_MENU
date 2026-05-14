@@ -6,7 +6,7 @@ A web scraping tool that allows the user to view the current breakfast/lunch/din
 
 To run correctly, ensure that all libraries are installed using 
 
-```pip install beautifulsoup4 requests colorama sortedcontainers google-genai python-dotenv```
+```pip install -r requirements.txt```
 
 You also must have a gemini api key and create a .env file that contains
 
@@ -25,7 +25,7 @@ Commands and all other choices are selected by entering the number next to the o
 
 ```menu```
 
-You will be prompted to select a date in the format after which the menu for breakfast/lunch/dinner for that day will be printed. Items in your list of favorites wil be highlighted yellow.
+You will be prompted to select a date in the format after which the menu for breakfast/lunch/dinner for that day will be printed. Items in your list of favorites wil be highlighted yellow and items that contain ingredients mentioned in your allergy/dietary restriction list will be highlighted red.
 
 ```edit```
 
@@ -56,8 +56,18 @@ Deleting will prompt you to select an item in your favorites list or cancel afte
 
 Viewing will display all of your current favorites.
 
-``` recommendation ```
-You will be prompted to select a date. Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner for that date using the menu for that date, your list of favorite meals, and the ingredients in your favorite meals and meals on the menu.
+```allergies/dietary restrictions```
+
+You can choose between adding, deleting, viewing, or exiting. 
+
+Adding will prompt you to enter the name of the allergen/dietary restriction after which the specified allergen/dietary restriction will be added to the list
+
+Deleting will prompt you to select an allergen/dietary restriction in your list or cancel after which the selected item will be deleted from the list.
+
+Viewing will display all of your current allergen/dietary restriction.
+
+``` recommendation (main_ai.py only)```
+You will be prompted to select a date. You can then toggle additional preferences (which will be displayed) or continue. Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner for that date using the menu for that date, your list of favorite meals, the ingredients in your favorite meals, foods in your allergy/dietary restriction list, toggled preferences, and meals on the menu.
 
 ```exit```
 
