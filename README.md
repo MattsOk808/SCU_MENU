@@ -6,7 +6,9 @@ A web scraping tool that allows the user to view the current breakfast/lunch/din
 
 To run correctly, ensure that all libraries are installed using 
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 You also must have a gemini api key and create a .env file that contains
 
