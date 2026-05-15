@@ -117,3 +117,4 @@ def parse_menu(url=base_url,date=f"{date.today()}"):
                                     ingredient_dict[item_name]=ingredient_list
                             else:
                                 ingredient_dict[item_name]=["Not provided"]
+                            saved_menus[date][time][restaurant_name].append(iteminfo(item_name,item_price))
