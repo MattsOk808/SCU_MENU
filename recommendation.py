@@ -2,7 +2,7 @@ from google import genai
 from google.genai import errors
 import os
 import json
-from shared_vars import EnhancedEncoder
+from shared.shared_vars import EnhancedEncoder
 from dotenv import load_dotenv
 
 os.environ['GRPC_VERBOSITY'] = 'NONE'
