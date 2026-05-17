@@ -24,6 +24,12 @@ Run with
 python main.py
 ```
 
+or
+```
+python main_ai.py
+```
+for version with AI recommendations
+
 Commands:
 
 Commands and all other choices are selected by entering the number next to the option (unless specified otherwise)
