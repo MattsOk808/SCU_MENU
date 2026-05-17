@@ -1,5 +1,3 @@
-<img width="792" height="376" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/ac1f3705-db0d-4457-9147-9f5a22b89220" />
-<img width="792" height="376" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/8247170f-8684-4a49-8438-d26122d596a9" />
 # SCU_MENU
 
 A web scraping tool that allows the user to view the current breakfast/lunch/dinner menu at SCU. Also allows the user to save meals into a schedule, keep track of favorites, and view the ingredients used in a specified meal.
