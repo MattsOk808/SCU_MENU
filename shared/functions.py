@@ -23,13 +23,13 @@ def print_menu(times=weekday_meals,restaurants=default_restaurant_list,date=f"{d
                     for i,item in enumerate(saved_menus[date][time][restaurant],start=1):
                         for ingredient in ingredient_dict[item.name]:
                             if ingredient in allergies_and_restrictions:
-                                print(f"{[i]} {Style.BRIGHT}{Fore.RED}{item.name}: ${item.price}{Style.RESET_ALL}")
+                                print(f"{[i]} {Style.BRIGHT}{Fore.RED}{item.name}: ${item.price:.2f}{Style.RESET_ALL}")
                                 break
                         else:
                             if item.name in favorites_set:
-                                print(f"{[i]} {Style.BRIGHT}{Fore.YELLOW}{item.name}: ${item.price}{Style.RESET_ALL}")
+                                print(f"{[i]} {Style.BRIGHT}{Fore.YELLOW}{item.name}: ${item.price:.2f}{Style.RESET_ALL}")
                             else:
-                                print(f"{[i]} {item.name}: ${item.price}")
+                                print(f"{[i]} {item.name}: ${item.price:.2f}")
                     print("")
 def update_schedule(d,mealtime,restaurant,item_num):
     if mealtime=="breakfast" or mealtime=="brunch":

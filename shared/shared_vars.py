@@ -16,18 +16,21 @@ ingredient_dict=SortedDict()
 favorites_set=set()
 allergies_and_restrictions=set()
 
+dates=[]
+
 class iteminfo:
-    def __init__(self,name,price):
+    def __init__(self,name,price,restaurant):
         self.name=name
         self.price=price
+        self.restaurant=restaurant
 
     def to_json(self):
-        return {"name": self.name, "price": self.price}
+        return {"name": self.name, "price": float(self.price), "restaurant": self.restaurant}
     
     @staticmethod
     def from_dict(d):
-        if "name" in d and "price" in d:
-            return iteminfo(d["name"],d["price"])
+        if "name" in d and "price" in d and "restaurant" in d:
+            return iteminfo(d["name"],d["price"],d["restaurant"])
         return d
 
 class EnhancedEncoder(json.JSONEncoder):

@@ -35,7 +35,7 @@ def edit():
     d=dates[n-1]
     contains_info=True
     if d not in new_schedule_dict:
-        new_schedule_dict[d]=[iteminfo("None","0.00"),iteminfo("None","0.00"),iteminfo("None","0.00")]
+        new_schedule_dict[d]=[iteminfo("None",0.00,"None"),iteminfo("None",0.00,"None"),iteminfo("None",0.00,"None")]
         contains_info=False
     if d not in saved_menus:
         parse_menu(date=d)
@@ -67,7 +67,7 @@ def edit():
                         restaurant=restaurants[option-1]
                         meals=[]
                         for item in saved_menus[d][mealtime][restaurant]:
-                            meals.append(f"{item.name}: ${item.price}")
+                            meals.append(f"{item.name}: ${item.price:.2f}")
                         meals.append("Cancel")
                         print_options(meals)
                         option=numcheck(input("Select item: "),len(meals))
@@ -118,19 +118,19 @@ def schedule():
             print(f"{d}: ")
             for i,meal in enumerate(info):
                 total_cost+=float(meal.price)
-                print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price}")
-            print(f"Total Cost: ${total_cost}\n")
+                print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price:.2f},    Restaurant: {meal.restaurant}")
+            print(f"Total Cost: ${total_cost:.2f}\n")
     elif choice==len(options):
         return
     else:
         info=new_schedule_dict[options[choice-1]]
         print(f"{options[choice-1]}: ")
-        total_cost=0.0
+        total_cost=0.00
         meal_list=get_times(options[choice-1])
         for i,meal in enumerate(info):
             total_cost+=float(meal.price)
-            print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price}")
-        print(f"Total Cost: ${total_cost}\n")
+            print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price:.2f},    Restaurant: {meal.restaurant}")
+        print(f"Total Cost: ${total_cost:.2f}\n")
 
 def ingredients():
     meals=[]
@@ -263,18 +263,18 @@ def allergies():
                     else:
                         break
             case 2:
-                options=sorted(allergies_and_restrictions)+["Cancel"]
-                print_options(options)
-                remove_item=numcheck(input("Enter allergy/dietary restriction to remove: "),len(options))
+                options2=sorted(allergies_and_restrictions)+["Cancel"]
+                print_options(options2)
+                remove_item=numcheck(input("Enter allergy/dietary restriction to remove: "),len(options2))
                 if remove_item == -2:
                     print("Input not a number")
                 elif remove_item == -1:
                     print("Input out of range")
-                elif remove_item == len(options):
+                elif remove_item == len(options2):
                     continue
                 else:   
-                    print(f"Removed {options[remove_item-1]} from allergy/dietary restrictions\n")
-                    allergies_and_restrictions.remove(options[remove_item-1])
+                    print(f"Removed {options2[remove_item-1]} from allergy/dietary restrictions\n")
+                    allergies_and_restrictions.remove(options2[remove_item-1])
                     continue
             case 3:
                 print("ALLERGIES AND DIETARY RESTRICTIONS")
