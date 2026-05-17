@@ -104,11 +104,47 @@ You can choose a meal after which the ingredients for that meal will be printed 
 
 You can choose between adding, deleting, viewing, or exiting. 
 
-Adding will prompt you for the date, restaurant, and item after which the selected item will be added to your list of favorites. 
+<img width="281" height="109" alt="Screenshot 2026-05-16 195400" src="https://github.com/user-attachments/assets/3a474dac-5186-4bbe-8f2e-981041732695" />
 
-Deleting will prompt you to select an item in your favorites list or cancel after which the selected item will be deleted from the list.
+<sub>*Options*</sub>
 
-Viewing will display all of your current favorites.
+Selecting add will prompt you for the date, time, restaurant, and item after which the selected item will be added to your list of favorites. 
+
+<img width="308" height="200" alt="Screenshot 2026-05-16 195459" src="https://github.com/user-attachments/assets/72e3df0f-e1b0-46c1-af5b-024587d0c958" />
+
+<sub>*Date selection*</sub>
+
+<img width="244" height="109" alt="Screenshot 2026-05-16 195520" src="https://github.com/user-attachments/assets/0c18df80-5cf4-4abe-a344-99eb38277433" />
+
+<sub>*Time selection*</sub>
+
+<img width="424" height="245" alt="Screenshot 2026-05-16 195651" src="https://github.com/user-attachments/assets/d3702aca-3e49-46d9-a0db-27dc05a29a9c" />
+
+<sub>*Restaurant selection*</sub>
+
+<img width="363" height="112" alt="Screenshot 2026-05-16 195744" src="https://github.com/user-attachments/assets/215c630b-f7ab-4d4a-a442-c28a3f7f688b" />
+
+<sub>*Item selection*</sub>
+
+<img width="465" height="46" alt="Screenshot 2026-05-16 195825" src="https://github.com/user-attachments/assets/4be6e1c4-b05f-4427-ba4d-5690d6324f0f" />
+
+<sub>*Logging change*</sub>
+
+Selecting delete will prompt you to select an item in your favorites list or cancel after which the selected item will be deleted from the list.
+
+<img width="393" height="138" alt="Screenshot 2026-05-16 195917" src="https://github.com/user-attachments/assets/f9d434e6-fe5d-42cc-9f67-a256ae50ca72" />
+
+<sub>*Item selection*</sub>
+
+<img width="569" height="44" alt="Screenshot 2026-05-16 195948" src="https://github.com/user-attachments/assets/9e63484a-b7ac-4530-baf2-5f677ed482b2" />
+
+<sub>*Logging change*</sub>
+
+Selecting view will display all of your current favorites.
+
+<img width="569" height="44" alt="Screenshot 2026-05-16 195948" src="https://github.com/user-attachments/assets/fdfce270-7921-4e7b-8a87-66ce18f1426e" />
+
+<sub>*Displaying list*</sub>
 
 ```allergies/dietary restrictions```
 
