@@ -1,3 +1,5 @@
+<img width="792" height="376" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/ac1f3705-db0d-4457-9147-9f5a22b89220" />
+<img width="792" height="376" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/8247170f-8684-4a49-8438-d26122d596a9" />
 # SCU_MENU
 
 A web scraping tool that allows the user to view the current breakfast/lunch/dinner menu at SCU. Also allows the user to save meals into a schedule, keep track of favorites, and view the ingredients used in a specified meal.
@@ -91,7 +93,7 @@ You will be prompted to select a date or 'full'.
 
 If a date was chosen, your schedule for that date will be printed. If 'full' was entered, all entries in your schedule are printed out. Additionally, the total cost of all meals for that day will be printed in both cases.
 
-<img width="525" height="530" alt="Screenshot 2026-05-16 194857" src="https://github.com/user-attachments/assets/34b70367-3455-42cc-918e-c3fb912b36ea" />
+<img width="792" height="376" alt="Screenshot 2026-05-16 205413" src="https://github.com/user-attachments/assets/0da242a5-6440-4c24-95ec-82d70063c367" />
 
 <sub>*Full schedule displayed*</sub>
 
