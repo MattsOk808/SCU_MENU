@@ -142,7 +142,7 @@ Selecting delete will prompt you to select an item in your favorites list or can
 
 Selecting view will display all of your current favorites.
 
-<img width="569" height="44" alt="Screenshot 2026-05-16 195948" src="https://github.com/user-attachments/assets/fdfce270-7921-4e7b-8a87-66ce18f1426e" />
+<img width="348" height="89" alt="Screenshot 2026-05-16 200122" src="https://github.com/user-attachments/assets/57aad5d3-49cc-4f9e-bfda-a9ecf5677c09" />
 
 <sub>*Displaying list*</sub>
 
@@ -150,15 +150,51 @@ Selecting view will display all of your current favorites.
 
 You can choose between adding, deleting, viewing, or exiting. 
 
+<img width="317" height="111" alt="Screenshot 2026-05-16 200304" src="https://github.com/user-attachments/assets/35195921-99ca-4a3d-8af9-ca033d3226a8" />
+
+<sub>*Options*</sub>
+
 Adding will prompt you to enter the name of the allergen/dietary restriction after which the specified allergen/dietary restriction will be added to the list
+
+<img width="607" height="66" alt="Screenshot 2026-05-16 200426" src="https://github.com/user-attachments/assets/8a0c045f-7335-407f-9119-a79de18ed258" />
+
+<sub>*Adding allergen/dietary restriction*</sub>
 
 Deleting will prompt you to select an allergen/dietary restriction in your list or cancel after which the selected item will be deleted from the list.
 
+<img width="460" height="166" alt="Screenshot 2026-05-16 200710" src="https://github.com/user-attachments/assets/a38811a6-40cd-408a-8074-f6c7ab11fdb0" />
+
+<sub>*Deleting allergen/dietary restriction*</sub>
+
 Viewing will display all of your current allergen/dietary restriction.
 
+<img width="451" height="106" alt="Screenshot 2026-05-16 200753" src="https://github.com/user-attachments/assets/371d43ef-62b0-4071-b389-b29672b1fea6" />
+
+<sub>*Displaying all allergies/dietary restrictions*</sub>
+
 ``` recommendation (main_ai.py only)```
-You will be prompted to select a date. You can then toggle additional preferences (which will be displayed) or continue. Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner for that date using the menu for that date, your list of favorite meals, the ingredients in your favorite meals, foods in your allergy/dietary restriction list, toggled preferences, and meals on the menu.
+You will be prompted to select a date. 
+
+<img width="540" height="195" alt="Screenshot 2026-05-16 200913" src="https://github.com/user-attachments/assets/44593e45-119e-4669-a7a4-ab1d430e1ff9" />
+
+<sub>*Date selection*</sub>
+
+You can then toggle additional preferences or continue. 
+
+<img width="647" height="462" alt="Screenshot 2026-05-16 201021" src="https://github.com/user-attachments/assets/5cdcceb6-c140-4ad8-a1e7-e0413d2645c3" />
+
+<sub>*Preference selection*</sub>
+
+Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner for that date using the menu for that date, your list of favorite meals, the ingredients in your favorite meals, foods in your allergy/dietary restriction list, toggled preferences, and meals on the menu.
+
+<img width="1838" height="396" alt="Screenshot 2026-05-16 201206" src="https://github.com/user-attachments/assets/00c7db01-c90b-442f-828d-ac715cc59856" />
+
+<sub>*Gemini recommendation*</sub>
 
 ```exit```
 
 Exits the program and writes the schedule into schedule.json, favorites into favorites.json, and ingredients into ingredients.json (for only the meals in your schedule and favorites list)
+
+<img width="1166" height="693" alt="Screenshot 2026-05-16 201308" src="https://github.com/user-attachments/assets/5526452d-2435-4d67-bdf2-2003400535e2" />
+
+<sub>*Example of schedule.json*</sub>
