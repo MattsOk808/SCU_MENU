@@ -66,15 +66,39 @@ When choosing to edit the meal, you will be given two prompts, the first to sele
 
 <sub>*Meal selection*</sub>
 
-When exiting, the changes to your schedule will be printed.
+When exiting, the changes to your schedule will be printed if both the save options was at least one item was added to the schedule (in the case where a new entry was created)
+
+<img width="371" height="87" alt="Screenshot 2026-05-16 194628" src="https://github.com/user-attachments/assets/36c6c81f-f9c9-4519-bc02-7251db174d34" />
+
+<sub>*Changes being displayed*</sub>
 
 ```schedule```
 
-You will be prompted to select a date or 'full'. If a date was chosen, your schedule for that date will be printed. If 'full' was entered, all entries in your schedule are printed out. Additionally, the total cost of all meals for that day will be printed in both cases.
+You will be prompted to select a date or 'full'. 
+
+<img width="306" height="152" alt="Screenshot 2026-05-16 194843" src="https://github.com/user-attachments/assets/2fde08d7-7ef6-4a83-b69f-50914ff5bf8c" />
+
+<sub>*Options*</sub>
+
+If a date was chosen, your schedule for that date will be printed. If 'full' was entered, all entries in your schedule are printed out. Additionally, the total cost of all meals for that day will be printed in both cases.
+
+<img width="525" height="530" alt="Screenshot 2026-05-16 194857" src="https://github.com/user-attachments/assets/34b70367-3455-42cc-918e-c3fb912b36ea" />
+
+<sub>*Full schedule displayed*</sub>
 
 ```ingredients```
 
-You will be shown a list of all meals in your schedule and all meals you have seen in the menu thus far. You can choose a meal after which the ingredients for that meal will be printed out.
+You will be shown a list of all meals in your schedule and all meals you have seen in the menu thus far. 
+
+<img width="457" height="198" alt="Screenshot 2026-05-16 195116" src="https://github.com/user-attachments/assets/3188dd85-85b6-476d-ba8e-9397f55f8b3f" />
+
+<sub>*Options*</sub>
+
+You can choose a meal after which the ingredients for that meal will be printed out.
+
+<img width="1482" height="19" alt="Screenshot 2026-05-16 195211" src="https://github.com/user-attachments/assets/fb0a6a06-e0e8-49ea-b512-001a1c853620" />
+
+<sub>*Example of ingredients being displayed*</sub>
 
 ```favorites```
 
