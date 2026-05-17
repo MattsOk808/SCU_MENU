@@ -19,7 +19,10 @@ without the quotations and with your api key
 
 # RUNNING
 
-Run with ```python main.py```
+Run with 
+```
+python main.py
+```
 
 Commands:
 
