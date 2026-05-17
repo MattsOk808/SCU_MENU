@@ -27,20 +27,44 @@ Commands and all other choices are selected by entering the number next to the o
 
 <img width="486" height="175" alt="Screenshot 2026-05-16 193108" src="https://github.com/user-attachments/assets/8c5db468-f86e-4c3f-9e67-aca15073891e" />
 
-Example
+Example of user interface
 
 ```menu```
 
-You will be prompted to select a date in the format after which the menu for breakfast/lunch/dinner for that day will be printed. Items in your list of favorites wil be highlighted yellow and items that contain ingredients mentioned in your allergy/dietary restriction list will be highlighted red.
+You will be prompted to select a date after which the menu for breakfast/lunch/dinner for that day will be printed. Items in your list of favorites wil be highlighted yellow and items that contain ingredients mentioned in your allergy/dietary restriction list will be highlighted red.
+
+<img width="501" height="198" alt="Screenshot 2026-05-16 193439" src="https://github.com/user-attachments/assets/1679744d-0c3d-48fa-9033-94e64ead8569" />
+
+Date selection
+
+<img width="1197" height="987" alt="Screenshot 2026-05-16 193912" src="https://github.com/user-attachments/assets/5e13d4de-3b99-4b26-a4cf-75922b02de2e" />
+
+Example menu display with favorited highlighted yellow
 
 ```edit```
 
 You will be prompted to select a date. 
 If you do not have a prexisting entry for that date, a new one will be created. The new entry will not be saved if no edits are made to it.
 
+<img width="310" height="200" alt="Screenshot 2026-05-16 193641" src="https://github.com/user-attachments/assets/333263ca-af28-4d2d-8e69-0d2c955f754f" />
+
+Date selection
+
 You will then be able to choose between viewing the menu for that date, editing your meal for breakfast/lunch/dinner, or exiting the editor via saving or not saving the changes.
 
+<img width="340" height="157" alt="Screenshot 2026-05-16 193704" src="https://github.com/user-attachments/assets/159bad10-b18c-4fbb-97dc-361c2426cda5" />
+
+User interface
+
 When choosing to edit the meal, you will be given two prompts, the first to select the restaurant and the second to select the meal.
+
+<img width="346" height="245" alt="Screenshot 2026-05-16 194125" src="https://github.com/user-attachments/assets/70dbaf30-a97b-42eb-a9c4-2214509e025e" />
+
+Restaurant selection
+
+<img width="430" height="91" alt="Screenshot 2026-05-16 194056" src="https://github.com/user-attachments/assets/808f8178-1bdd-4fcc-897d-cc72da613fe6" />
+
+Meal selection
 
 When exiting, the changes to your schedule will be printed.
 
