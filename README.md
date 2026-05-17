@@ -27,7 +27,7 @@ Commands and all other choices are selected by entering the number next to the o
 
 <img width="486" height="175" alt="Screenshot 2026-05-16 193108" src="https://github.com/user-attachments/assets/8c5db468-f86e-4c3f-9e67-aca15073891e" />
 
-Example of user interface
+<sub>Example of user interface</sub>
 
 ```menu```
 
