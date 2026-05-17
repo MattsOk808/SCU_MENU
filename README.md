@@ -173,6 +173,7 @@ Viewing will display all of your current allergen/dietary restriction.
 <sub>*Displaying all allergies/dietary restrictions*</sub>
 
 ``` recommendation (main_ai.py only)```
+
 You will be prompted to select a date. 
 
 <img width="540" height="195" alt="Screenshot 2026-05-16 200913" src="https://github.com/user-attachments/assets/44593e45-119e-4669-a7a4-ab1d430e1ff9" />
