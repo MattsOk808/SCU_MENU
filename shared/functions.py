@@ -12,12 +12,12 @@ def get_times(d):
     else:
         return weekday_meals
 
-def print_menu(times=weekday_meals,restaurants=default_restaurant_list,date=f"{date.today()}"):
+def print_menu(times=weekday_meals,date=f"{date.today()}"):
     times=get_times(date)
     for time in times:
         if time in saved_menus[date]:
             print(f"{time.upper()}")
-            for restaurant in restaurants:
+            for restaurant in saved_menus[date][time]:
                 if restaurant in saved_menus[date][time]:
                     print(restaurant)
                     for i,item in enumerate(saved_menus[date][time][restaurant],start=1):

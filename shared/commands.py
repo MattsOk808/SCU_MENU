@@ -1,6 +1,6 @@
 from shared.functions import *
 from shared.shared_vars import *
-from shared.parse_menu import parse_menu
+from shared.parse_menu import *
 
 edit_options_left=["Menu"]
 edit_options_right=["Save and exit","Exit without saving"]
@@ -19,6 +19,7 @@ def menu():
     d=dates[n-1]
     if d not in saved_menus:
         parse_menu(date=d)
+        parse_fresh_bytes(date=d)
     print_menu(date=d)
 
 def edit():
@@ -39,6 +40,7 @@ def edit():
         contains_info=False
     if d not in saved_menus:
         parse_menu(date=d)
+        parse_fresh_bytes(date=d)
     prev_b=new_schedule_dict[d][0]
     prev_l=new_schedule_dict[d][1]
     prev_d=new_schedule_dict[d][2]
@@ -176,6 +178,7 @@ def favorites():
                     d=dates[d-1]
                     if d not in saved_menus:
                         parse_menu(date=d)
+                        parse_fresh_bytes(date=d)
                     options3=get_times(d)+["Cancel"]
                     while True:
                         print_options(options3)
