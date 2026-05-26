@@ -205,6 +205,6 @@ Then, using Gemini's API, you will be recommended breakfast, lunch, and dinner f
 
 Exits the program and writes the schedule into schedule.json, favorites into favorites.json, and ingredients into ingredients.json (for only the meals in your schedule and favorites list)
 
-<img width="1166" height="693" alt="Screenshot 2026-05-16 201308" src="https://github.com/user-attachments/assets/5526452d-2435-4d67-bdf2-2003400535e2" />
+<img width="659" height="402" alt="Screenshot 2026-05-25 190154" src="https://github.com/user-attachments/assets/359f9112-437c-4069-88e3-dde783efca82" />
 
 <sub>*Example of schedule.json*</sub>
