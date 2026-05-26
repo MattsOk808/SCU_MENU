@@ -75,7 +75,7 @@ When choosing to edit the meal, you will be given two prompts, the first to sele
 
 <sub>*Meal selection*</sub>
 
-When exiting, the changes to your schedule will be printed if both the save options was at least one item was added to the schedule (in the case where a new entry was created)
+When exiting, the changes to your schedule will be printed.
 
 <img width="371" height="87" alt="Screenshot 2026-05-16 194628" src="https://github.com/user-attachments/assets/36c6c81f-f9c9-4519-bc02-7251db174d34" />
 
