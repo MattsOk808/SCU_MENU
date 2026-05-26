@@ -59,15 +59,15 @@ If you do not have a prexisting entry for that date, a new one will be created. 
 
 <sub>*Date selection*</sub>
 
-You will then be able to choose between viewing the menu for that date, editing your meal for breakfast/lunch/dinner, or exiting the editor via saving or not saving the changes.
+You will then be able to choose between viewing the menu for that date, viewing your current schedule for that date, editing your meal for breakfast/lunch/dinner, or exiting the editor via saving or not saving the changes.
 
-<img width="340" height="157" alt="Screenshot 2026-05-16 193704" src="https://github.com/user-attachments/assets/159bad10-b18c-4fbb-97dc-361c2426cda5" />
+<img width="370" height="169" alt="Screenshot 2026-05-25 185714" src="https://github.com/user-attachments/assets/decc2854-6b54-42bb-9ad2-35b9fda17ae6" />
 
 <sub>*User interface*</sub>
 
-When choosing to edit the meal, you will be given two prompts, the first to select the restaurant and the second to select the meal.
+When choosing to edit the meal, you will be given two prompts, the first to select the restaurant and the second to select the meal. If delete is chose, the meal for that day is set to None instead.
 
-<img width="346" height="245" alt="Screenshot 2026-05-16 194125" src="https://github.com/user-attachments/assets/70dbaf30-a97b-42eb-a9c4-2214509e025e" />
+<img width="365" height="358" alt="Screenshot 2026-05-25 185852" src="https://github.com/user-attachments/assets/19a8fb7a-5c61-421d-b145-eba41ed3c687" />
 
 <sub>*Restaurant selection*</sub>
 
