@@ -64,7 +64,7 @@ def edit():
                     total_cost+=float(meal.price)
                     print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price:.2f},    Restaurant: {meal.restaurant}")
                 print(f"Total Cost: ${total_cost:.2f}\n")
-            case int() if option > 2 and option < 5: #editing a meal
+            case int() if option > 2 and option < 6: #editing a meal
                 mealtime=(edit_options_left+get_times(d)+edit_options_right)[option-1].lower()
                 while True:
                     restaurants=get_options(saved_menus[d][mealtime],["Delete","Cancel"])
