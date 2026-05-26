@@ -2,7 +2,7 @@ from shared.functions import *
 from shared.shared_vars import *
 from shared.parse_menu import *
 
-edit_options_left=["Menu"]
+edit_options_left=["View Menu","View Current Schedule"]
 edit_options_right=["Save and exit","Exit without saving"]
 
 def menu():
@@ -55,17 +55,38 @@ def edit():
                 print("Input out of range")
             case 1: #menu
                 print_menu(date=d)
-            case int() if option > 1 and option < 5: #editing a meal
+            case 2: #view current
+                info=new_schedule_dict[d]
+                print(f"{d}: ")
+                total_cost=0.00
+                meal_list=get_times(d)
+                for i,meal in enumerate(info):
+                    total_cost+=float(meal.price)
+                    print(f"{meal_list[i].upper()}: {meal.name} - ${meal.price:.2f},    Restaurant: {meal.restaurant}")
+                print(f"Total Cost: ${total_cost:.2f}\n")
+            case int() if option > 2 and option < 5: #editing a meal
                 mealtime=(edit_options_left+get_times(d)+edit_options_right)[option-1].lower()
                 while True:
-                    restaurants=get_options(saved_menus[d][mealtime],["Cancel"])
+                    restaurants=get_options(saved_menus[d][mealtime],["Delete","Cancel"])
                     print_options(restaurants)
                     option=numcheck(input("Select Restaurant: "),len(restaurants))
                     if option == -2:
                         print("Input not a number")
                     elif option == -1:
                         print("Input out of range")
-                    elif option!=len(restaurants):
+                    elif option == len(restaurants)-1:
+                        if mealtime=="breakfast" or mealtime=="brunch":
+                            t=0
+                        elif mealtime=="lunch":
+                            t=1
+                        elif mealtime=="dinner":
+                            t=2
+                        print(f"Deleted meal for {mealtime}")
+                        new_schedule_dict[d][t]=iteminfo("None",0.00,"None")
+                        break
+                    elif option == len(restaurants):
+                        break
+                    else:
                         restaurant=restaurants[option-1]
                         meals=[]
                         for item in saved_menus[d][mealtime][restaurant]:
@@ -85,16 +106,14 @@ def edit():
                             contains_info=True
                             print(f"Updated {mealtime} to {new_meal.name}")
                             break
-                    else:
-                        break
-            case 5: #save and exit
+            case 6: #save and exit
                 if contains_info:
                     print(f"Updates: \n {prev_b.name} -> {new_schedule_dict[d][0].name}\n {prev_l.name} -> {new_schedule_dict[d][1].name}\n {prev_d.name} -> {new_schedule_dict[d][2].name}")
                 else:
                     print("No data detected. Not saving entry")
                     new_schedule_dict.pop(d)
                 break
-            case 6: #exit and don't save
+            case 7: #exit and don't save
                 if contains_info:
                     new_schedule_dict[d][0]=prev_b
                     new_schedule_dict[d][1]=prev_l
