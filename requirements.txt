@@ -4,3 +4,4 @@ colorama
 sortedcontainers 
 google-genai 
 python-dotenv
+lxml
