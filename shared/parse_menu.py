@@ -1,14 +1,15 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 from urllib.request import Request, urlopen
 from datetime import date,datetime
-from shared.shared_vars import saved_menus,base_url,weekday_meals,weekenend_meals,ingredient_dict,headers,iteminfo
-from shared.functions import get_times
+from core.shared_vars import saved_menus,base_url,weekday_meals,weekenend_meals,ingredient_dict,headers,iteminfo
+from core.functions import get_times
 import re
 
 def parse_menu(url=base_url,date=f"{date.today()}"):
     page=urlopen(Request(url+date,headers=headers))
     html=page.read().decode("utf-8")
-    soup=BeautifulSoup(html,"html.parser")
+    menu_strainer = SoupStrainer("section", class_=["panel s-wrapper site-panel site-panel--daypart site-panel--daypart-even","panel s-wrapper site-panel site-panel--daypart"])
+    soup=BeautifulSoup(html,"lxml",parse_only=menu_strainer)
     meal_list=get_times(date)
     for time in meal_list:
         m=soup.find("section", class_=["panel s-wrapper site-panel site-panel--daypart site-panel--daypart-even","panel s-wrapper site-panel site-panel--daypart"],id=time)
@@ -123,7 +124,8 @@ def parse_menu(url=base_url,date=f"{date.today()}"):
 def parse_fresh_bytes(url="https://scudining.cafebonappetit.com/cafe/fresh-bytes/",date=f"{date.today()}"):
     page=urlopen(Request(url+date,headers=headers))
     html=page.read().decode("utf-8")
-    soup=BeautifulSoup(html,"html.parser")
+    fresh_bytes_strainer = SoupStrainer("section", class_=lambda x: x and "site-panel--daypart" in x)
+    soup=BeautifulSoup(html,"lxml",parse_only=fresh_bytes_strainer)
     m=soup.find_all("section",class_=["panel s-wrapper site-panel site-panel--daypart","panel s-wrapper site-panel site-panel--daypart site-panel--daypart-even"])
     for menu in m:
         name=menu.find("h2",class_="panel__title site-panel__daypart-panel-title").get_text(strip=True)
